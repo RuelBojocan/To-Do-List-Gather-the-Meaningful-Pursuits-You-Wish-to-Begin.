@@ -73,10 +73,8 @@ function sub() {
                     }
                 }
                 else {
-                    if (index !== -1) {
-                        stored.splice(index, 1);
-                        localStorage.setItem("todoItems", JSON.stringify(stored));
-                    }
+                    stored.splice(index, 1);
+                    localStorage.setItem("todoItems", JSON.stringify(stored));
                     values.remove();
                 }
 
@@ -89,10 +87,8 @@ function sub() {
         bura.addEventListener('click', function delte() {
             const original = mainHolder.getAttribute("orig");
             const index = stored.indexOf(original);
-            if (index !== -1) {
-                stored.splice(index, 1);
-                localStorage.setItem("todoItems", JSON.stringify(stored));
-            }
+            stored.splice(index, 1);
+            localStorage.setItem("todoItems", JSON.stringify(stored));
             values.remove();
 
 
@@ -210,10 +206,8 @@ load = () => {
                         }
                     }
                     else {
-                        if (index !== -1) {
-                            stored.splice(index, 1);
-                            localStorage.setItem("todoItems", JSON.stringify(stored));
-                        }
+                        stored.splice(index, 1);
+                        localStorage.setItem("todoItems", JSON.stringify(stored));
                         values.remove();
                     }
 
@@ -226,10 +220,9 @@ load = () => {
             bura.addEventListener('click', function () {
                 const original = mainHolder.getAttribute("orig");
                 const index = stored.indexOf(original);
-                if (index !== -1) {
-                    stored.splice(index, 1);
-                    localStorage.setItem("todoItems", JSON.stringify(stored));
-                }
+                stored.splice(index, 1);
+                localStorage.setItem("todoItems", JSON.stringify(stored));
+
                 values.remove();
 
 
@@ -282,4 +275,5 @@ if (stored.length > 0) {
 
 //Memory Storage Value
 console.log(JSON.stringify(stored));
+
 
