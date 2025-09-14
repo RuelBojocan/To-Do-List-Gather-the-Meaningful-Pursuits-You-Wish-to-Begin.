@@ -42,6 +42,12 @@ function sub() {
             mainHolder.contentEditable = true;
             mainHolder.spellcheck = false;
             mainHolder.focus();
+            const range = document.createRange();
+            const selection = window.getSelection();
+            range.selectNodeContents(mainHolder);
+            range.collapse(false); // place at end
+            selection.removeAllRanges();
+            selection.addRange(range);
 
 
             const check = document.createElement('button');
@@ -173,6 +179,12 @@ load = () => {
                 mainHolder.contentEditable = true;
                 mainHolder.spellcheck = false;
                 mainHolder.focus();
+                const range = document.createRange();
+                const selection = window.getSelection();
+                range.selectNodeContents(mainHolder);
+                range.collapse(false); // place at end
+                selection.removeAllRanges();
+                selection.addRange(range);
 
 
                 const check = document.createElement('button');
@@ -270,3 +282,4 @@ if (stored.length > 0) {
 
 //Memory Storage Value
 console.log(JSON.stringify(stored));
+
