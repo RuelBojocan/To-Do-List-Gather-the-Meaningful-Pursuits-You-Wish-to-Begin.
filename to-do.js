@@ -22,7 +22,7 @@ function sub() {
         values.appendChild(changer);
 
         const imgMake1 = document.createElement("img");
-        imgMake1.src = "/assets/trash.svg";
+        imgMake1.src = "assets/trash.svg";
         const bura = document.createElement("button");
         bura.className = "bura";
         bura.appendChild(imgMake1);
@@ -251,3 +251,4 @@ if (stored.length > 0) {
 
 //Memory Storage Value
 console.log(JSON.stringify(stored));
+
