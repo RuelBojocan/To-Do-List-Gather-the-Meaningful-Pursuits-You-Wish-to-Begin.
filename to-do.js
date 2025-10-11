@@ -4,9 +4,8 @@ let stored = JSON.parse(localStorage.getItem("todoItems")) || [];
 function sub() {
     try {
         const lists = document.getElementById("to-do").value;
-        if (lists == "") {
-            return;
-        }
+        if (lists == "") return;
+
 
         const values = document.createElement("div");
         values.className = "values";
@@ -251,5 +250,6 @@ if (stored.length > 0) {
 
 //Memory Storage Value
 console.log(JSON.stringify(stored));
+
 
 
